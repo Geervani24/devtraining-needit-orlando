@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="0" type="collection">
+        <element label="Needed" max_length="1" name="needed" type="boolean"/>
+        <element label="Severity" max_length="10" name="severity" type="color"/>
+        <element default="0" label="Ticket Opened time" mandatory="true" max_length="3" name="ticket_opened_time" type="glide_duration"/>
+        <element default="0" label="Number of updates" max_length="40" name="u_integer_1" type="integer"/>
+        <element attributes="encode_utf8=false" label="Requested for" mandatory="true" max_length="32" name="u_reference_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="cis" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="People Function" sequence="0" value="pf"/>
+                <element inactive_on_update="false" label="Roster" sequence="1" value="rost"/>
+                <element inactive_on_update="false" label="CIS" sequence="2" value="cis"/>
+                <element inactive_on_update="false" label="You_Department_Choice" sequence="3" value="your_choice"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="cis1" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element inactive_on_update="false" label="People Function 1" sequence="0" value="pf1"/>
+                <element inactive_on_update="false" label="People Function 2" sequence="1" value="pf2"/>
+                <element inactive_on_update="false" label="Roster 1" sequence="2" value="rost1"/>
+                <element inactive_on_update="false" label="Roster 2" sequence="3" value="rost2"/>
+                <element inactive_on_update="false" label="CIS 1" sequence="4" value="cis1"/>
+                <element inactive_on_update="false" label="CIS 2" sequence="5" value="cis2"/>
+                <element inactive_on_update="false" label="Your_Department_Choice 1" sequence="6" value="your_choice1"/>
+                <element inactive_on_update="false" label="Your_Department_Choice 2" sequence="7" value="your_choice2"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
